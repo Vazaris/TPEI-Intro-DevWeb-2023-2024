@@ -74,38 +74,41 @@ necessaire:
 
 depuis l'environnement WSL copier le depot avec
 
-"git clone https://github.com/Vazaris/TPEI-Intro-DevWeb-2023-2024"
+```git clone https://github.com/Vazaris/TPEI-Intro-DevWeb-2023-2024```
 
 se déplacer dans le dossier nouvellement créé
 
 créer les variables d'environnement
 
-"cp .env.example .env"
+```cp .env.example .env```
 
-installation tamporaire de composer pour l'importation des librairies necessaires a l'execution du conteneur
+installation temporaire de composer pour l'importation des librairies necessaires a l'execution du conteneur :
 
-"docker run --rm --interactive --tty \
+```
+docker run --rm --interactive --tty \
   --volume $PWD:/app \
-  composer install"
+  composer install
+
+```
 
 creation de l'alias de sail pour faciliter son execution
 
-"alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'"
+```alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'```
 
-lancement "sail up -d"
+lancement ```sail up -d```
 
 installation de npm pour generer la clé d'application laralvel
 
-"sudo apt update && sudo apt upgrade && sudo apt install npm -y"
+```sudo apt update && sudo apt upgrade && sudo apt install npm -y```
 
 implémentation du paquet npm dans le projet laravel
 
-"npm install"
+```npm install```
 
 generation de la clé d'application
 
-"sail artisan key:generate"
+```sail artisan key:generate```
 
 migration de la clé d'application pour la mise en relation de laralvel et du serveur de base données
 
-"sail artisan migrate"
+```sail artisan migrate```
