@@ -64,3 +64,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## mise en place de l'outil pour contribuer au projet
+
+necessaire:
+	-environnement Docker
+	-environnement WSL
+
+depuis l'environnement WSL copier le depot avec "git clone https://github.com/Vazaris/TPEI-Intro-DevWeb-2023-2024/tree/main "
+
+
+se déplacer dans le dossier nouvellement créé
+créer l'image avec docker compose "docker-compose build"
+créer les variables d'environnement "cp .env.example .env"
+installer npm "sudo apt update && sudo apt upgrade -y && sudo apt install npm -y"
+"npm install"
+
+lancer le conteneur "sail up -d"
+"sail artisan key:generate"
+"sail artisan mugrate"
