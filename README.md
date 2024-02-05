@@ -88,7 +88,6 @@ installation temporaire de composer pour l'importation des librairies necessaire
 docker run --rm --interactive --tty \
   --volume $PWD:/app \
   composer install
-
 ```
 
 creation de l'alias de sail pour faciliter son execution
