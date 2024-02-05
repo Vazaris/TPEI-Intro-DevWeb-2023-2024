@@ -1,0 +1,79 @@
+
+.cards{
+    height: 1200px;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    
+    
+    
+    .character {
+    height: 500px;
+    width: 300px;
+    image-rendering: optimizeQuality;
+    border-radius: 25px;
+    /*position:absolute;*/
+    z-index: 10;
+    background-position: center;
+    text-align:center;
+    position: relative; /* Utilise une position relative pour ajuster les cartes */
+    margin:25px 50px;
+    }
+    
+    
+    .character:hover .card-front{
+      transition: transform 0.5s ease, filter 0.5s ease;
+      transform: rotateX(30deg);
+      filter: grayscale(100%);
+      /*filter: blur(1px);*/
+      background-image: radial-gradient(circle, transparent 150px, black);
+    }
+    
+    
+    .card-front {
+    height: 100%;
+    width: 100%;
+    image-rendering: optimizeQuality;
+    border-radius: 25px;
+    object-fit: cover;
+    position:relative;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    }
+    
+    .card-background {
+      height: 120%;
+      width: 135%;
+      left:-25%;
+      image-rendering: optimizeQuality;
+      border-radius: 25px;
+      object-fit: cover;
+      opacity: 0;
+      position:absolute;
+      bottom: 0;
+      transition: opacity 400ms, transform 400ms;
+    }
+    
+    
+    
+    .card-background:hover {
+      opacity: 1;
+      transform: translateY(-2rem) translateZ(20px);
+    }
+    
+    
+    .name {
+      color: white;
+      position:absolute;
+      top:83%;
+      left:3%;
+      z-index: 100;
+      font-size: 40px;
+      transition: transform 0.5s;
+    }
+    
+    .character:hover .name {
+      transform: translate3d(0%, -50px, 100px);
+    }
+    
