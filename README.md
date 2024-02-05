@@ -124,3 +124,8 @@ Migration de la clé d'application pour la mise en relation de laralvel et du se
 Installation du module breeze
 
 ```sail artisan breeze:install```
+
+
+## Accès à la page d'acceuil
+
+http://localhost/indexnavigation.html
