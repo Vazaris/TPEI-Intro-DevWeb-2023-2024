@@ -66,12 +66,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## l'equipe
-- **Maxime Morelet** Chef de projet
+## L'équipe :
+- **Maxime Morellet** Chef de projet
 - **Louis Ferandon** Responsable front-end
 - **Louis Masseron** Deboggeur
 
-## mise en place de l'outil pour contribuer au projet
+## Mise en place de l'outil pour contribuer au projet
 
 Il est nécessaire d'installer :
 - **environnement Docker**
