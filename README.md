@@ -72,29 +72,40 @@ necessaire:
 - **environnement Docker**
 - **environnement WSL**
 
-depuis l'environnement WSL copier le depot avec "git clone https://github.com/Vazaris/TPEI-Intro-DevWeb-2023-2024/tree/main "
+depuis l'environnement WSL copier le depot avec
 
+"git clone https://github.com/Vazaris/TPEI-Intro-DevWeb-2023-2024"
 
 se déplacer dans le dossier nouvellement créé
 
-créer l'image avec docker compose "docker-compose build"
+créer les variables d'environnement
 
-"sudo apt install composer"
+"cp .env.example .env"
 
-"composer update --ignore-platform-req=ext-curl"
+installation tamporaire de composer pour l'importation des librairies necessaires a l'execution du conteneur
 
-"composer install --ignore-platform-req=ext-curl"
+"docker run --rm --interactive --tty \
+  --volume $PWD:/app \
+  composer install"
 
-"docker-composer build"
+creation de l'alias de sail pour faciliter son execution
 
-créer les variables d'environnement "cp .env.example .env"
+"alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'"
 
-installer npm "sudo apt update && sudo apt upgrade -y && sudo apt install npm php -y"
+lancement "sail up -d"
+
+installation de npm pour generer la clé d'application laralvel
+
+"sudo apt update && sudo apt upgrade && sudo apt install npm -y"
+
+implémentation du paquet npm dans le projet laravel
 
 "npm install"
 
-lancer le conteneur "sail up -d"
+generation de la clé d'application
 
 "sail artisan key:generate"
+
+migration de la clé d'application pour la mise en relation de laralvel et du serveur de base données
 
 "sail artisan migrate"
