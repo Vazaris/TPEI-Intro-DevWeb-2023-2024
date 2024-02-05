@@ -66,6 +66,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
+## l'equipe
+- **Maxime Morelet** Chef de projet
+- **Louis Ferandon** Responsable front-end
+- **Louis Masseron** Deboggeur
+
 ## mise en place de l'outil pour contribuer au projet
 
 necessaire:
@@ -112,3 +117,7 @@ generation de la clé d'application
 migration de la clé d'application pour la mise en relation de laralvel et du serveur de base données
 
 ```sail artisan migrate```
+
+installation du module breeze
+
+```sail artisan breeze:install```
