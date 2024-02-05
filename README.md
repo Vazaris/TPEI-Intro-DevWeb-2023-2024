@@ -73,21 +73,23 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## mise en place de l'outil pour contribuer au projet
 
-necessaire:
+Il est nécessaire d'installer :
 - **environnement Docker**
 - **environnement WSL**
 
-depuis l'environnement WSL copier le depot avec
+Depuis l'environnement WSL copier le depot avec
 
 ```git clone https://github.com/Vazaris/TPEI-Intro-DevWeb-2023-2024```
 
-se déplacer dans le dossier nouvellement créé
+Se déplacer dans le dossier nouvellement créé
 
-créer les variables d'environnement
+```cd TPEI-Intro-Devweb-2023-2024```
+
+Créer les variables d'environnement
 
 ```cp .env.example .env```
 
-installation temporaire de composer pour l'importation des librairies necessaires a l'execution du conteneur :
+Installation temporaire de "composer" pour l'importation des librairies nécessaires à l'execution du conteneur
 
 ```
 docker run --rm --interactive --tty \
@@ -95,28 +97,30 @@ docker run --rm --interactive --tty \
   composer install
 ```
 
-creation de l'alias de sail pour faciliter son execution
+Création de l'alias de "sail" pour faciliter son exécution
 
 ```alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'```
 
-lancement ```sail up -d```
+Lancement du conteneur grâce à l'alias de "sail"
 
-installation de npm pour generer la clé d'application laralvel
+```sail up -d```
+
+Installation de npm pour génerer la clé d'application laralvel
 
 ```sudo apt update && sudo apt upgrade && sudo apt install npm -y```
 
-implémentation du paquet npm dans le projet laravel
+Implémentation du paquet npm dans le projet laravel
 
 ```npm install```
 
-generation de la clé d'application
+Géneration de la clé d'application
 
 ```sail artisan key:generate```
 
-migration de la clé d'application pour la mise en relation de laralvel et du serveur de base données
+Migration de la clé d'application pour la mise en relation de laralvel et du serveur de base données
 
 ```sail artisan migrate```
 
-installation du module breeze
+Installation du module breeze
 
 ```sail artisan breeze:install```
