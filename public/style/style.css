@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ajouté pour inclure le padding et border dans la largeur/hauteur d'un élément */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.image-container img {
+  height: 100%;
+  max-width: 80%; 
+  object-fit: cover;
+}
+
+
+@keyframes flotaison {
+  0%   {top:0px;}
+  50%  {top:10px;}
+  100% {top:0px;}
+}
+
+body {
+  background-color: black; 
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  color: white;
+  animation : flotaison 5s infinite;
+  z-index: 4;
+}
+
+.black-back {
+  color: black;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height:100%;
+  object-fit: fit;
+  background: radial-gradient(circle at top, transparent 70%, black 100%);
+  pointer-events: none;
+}
+
+
+.cards{
+    height: 1200px;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    
+    
+    
+    .character {
+    height: 500px;
+    width: 300px;
+    image-rendering: optimizeQuality;
+    border-radius: 25px;
+
+    z-index: 10;
+    background-position: center;
+    text-align:center;
+    position: relative; 
+    margin:25px 50px;
+    }
+    
+    
+    .character:hover .card-front{
+      transition: transform 0.5s ease, filter 0.5s ease;
+      transform: rotateX(30deg);
+      filter: grayscale(100%);
+      background-image: radial-gradient(circle, transparent 150px, black);
+    }
+    
+    
+    .card-front {
+    height: 100%;
+    width: 100%;
+    image-rendering: optimizeQuality;
+    border-radius: 25px;
+    object-fit: cover;
+    position:relative;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    }
+    
+    .card-background {
+      height: 120%;
+      width: 135%;
+      left:-25%;
+      image-rendering: optimizeQuality;
+      border-radius: 25px;
+      object-fit: cover;
+      opacity: 0;
+      position:absolute;
+      bottom: 0;
+      transition: opacity 400ms, transform 400ms;
+    }
+    
+    
+    
+    .card-background:hover {
+      opacity: 1;
+      transform: translateY(-2rem) translateZ(20px);
+    }
+    
+    
+    .name {
+      color: white;
+      position:absolute;
+      top:83%;
+      left:3%;
+      z-index: 100;
+      font-size: 40px;
+      transition: transform 0.5s;
+    }
+    
+    .character:hover .name {
+      transform: translate3d(0%, -50px, 100px);
+    }
+    
