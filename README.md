@@ -79,9 +79,18 @@ se déplacer dans le dossier nouvellement créé
 
 créer l'image avec docker compose "docker-compose build"
 
+"sudo apt install composer"
+
+"composer update --ignore-platform-req=ext-curl"
+
+"composer install --ignore-platform-req=ext-curl"
+
+"docker-composer build"
+
 créer les variables d'environnement "cp .env.example .env"
 
-installer npm "sudo apt update && sudo apt upgrade -y && sudo apt install npm -y"
+installer npm "sudo apt update && sudo apt upgrade -y && sudo apt install npm php -y"
+
 "npm install"
 
 lancer le conteneur "sail up -d"
